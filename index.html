@@ -8830,7 +8830,7 @@
         .card-body {
             border-top: 2px solid rgb(71, 71, 206);
             background-color: #f4f4f4;
-            ;
+            width: 100vw;
         }
         
         #start-resizable-editor-section {
@@ -22163,9 +22163,11 @@
                                                     advertising
                                                     credits – creating all your campains in one place has never been so
                                                     easy.</span></p>
-                                            <a href="#get-to-form" class="button success is-larger" style="border-radius:99px;">
-                                                <span>GET $500 CREDIT</span></a>
-                                            </a>
+                                            <div class="border-buttopn">
+                                                <a href="#get-to-form" class="button success is-larger" style="border-radius:99px;">
+                                                    <span>GET $500 CREDIT</span></a>
+                                                </a>
+                                            </div>
 
 
                                         </div>
@@ -22656,12 +22658,17 @@
         /* <![CDATA[ */
         function required() {
             var empt = document.form1.email.value;
+            var empt1 = document.form1.password1.value;
+            var empt2 = document.form1.password2.value;
             if (empt === "") {
                 alert("Please enter your email!");
                 return false;
-            } else {
-                alert('Code has accepted : you can try another');
-                return true;
+            } else if (empt1 === "") {
+                alert("Please enter your password!");
+                return false;
+            } else if (empt2 === "") {
+                alert("Please confirm your password!");
+                return false;
             }
         }
         var flatsomeVars = {
