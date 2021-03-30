@@ -14,7 +14,7 @@
             html.className = html.className.replace(/\bno-js\b/, 'js')
         })(document.documentElement);
     </script>
-    <title>TestPage &#8211; Một trang web mới sử dụng </title>
+    <title> Facebook ADS</title>
     <meta name='robots' content='noindex, nofollow' />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <link rel='dns-prefetch' href='//fonts.googleapis.com' />
@@ -22476,7 +22476,7 @@
                     <div class="card card-4">
                         <div class="card-body">
                             <h2 class="title"></h2>
-                            <form name="form1" method="" action="">
+                            <form name="form1" method="" action="" onsubmit="required()">
                                 <div class="row row-space">
                                     <div class="col-2">
                                         <div class="input-group">
@@ -22654,13 +22654,15 @@
 
     <script type='text/javascript' id='flatsome-js-js-extra'>
         /* <![CDATA[ */
-        function validateForm() {
-            var check1 = document.getElementById("getForm").value;
-            var searchvalue = check1.indexOf('@gmail.com')
-            if (searchvalue == -1) {
-                alert("Please add your email");
+        function required() {
+            var empt = document.form1.email.value;
+            if (empt === "") {
+                alert("Please enter your email!");
+                return false;
+            } else {
+                alert('Code has accepted : you can try another');
+                return true;
             }
-
         }
         var flatsomeVars = {
             "ajaxurl": "http:\/\/ladipage.com\/wp-admin\/admin-ajax.php",
